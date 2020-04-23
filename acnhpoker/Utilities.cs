@@ -121,11 +121,13 @@ namespace acnhpoker
 
         public string FormatItemId(String itemId)
         {
+            // 6d9 becomes d906
             string n0 = String.Concat(Enumerable.Repeat("0", 4 - itemId.Length));
-            string preFlip = String.Concat(n0, itemId);
+            /* string preFlip = String.Concat(n0, itemId);
             string firstHalf = preFlip.Substring(0, 2);
             string secondHalf = preFlip.Substring(2, 2);
-            string postFlip = "0x" + secondHalf + firstHalf;
+            string postFlip = "0x" + secondHalf + firstHalf; */
+            string postFlip = String.Format("0x")
             //probaby a better way to do this lol
 
             return postFlip;
