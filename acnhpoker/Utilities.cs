@@ -11,8 +11,11 @@ namespace acnhpoker
 {
     class Utilities
     {
-        UInt32 ItemSlotBase = 0xAC3B90C0;
-        UInt32 ItemSlot21Base = 0xAC3B9008;
+        // UInt32 ItemSlotBase = 0xAC3B90C0;
+        // UInt32 ItemSlot21Base = 0xAC3B9008;
+
+        UInt32 ItemSlotBase = 0xAC4723D0;
+        UInt32 ItemSlot21Base = 0xAC472318;
 
         public Utilities()
         {
@@ -121,13 +124,11 @@ namespace acnhpoker
 
         public string FormatItemId(String itemId)
         {
-            // 6d9 becomes d906
             string n0 = String.Concat(Enumerable.Repeat("0", 4 - itemId.Length));
-            /* string preFlip = String.Concat(n0, itemId);
+            string preFlip = String.Concat(n0, itemId);
             string firstHalf = preFlip.Substring(0, 2);
             string secondHalf = preFlip.Substring(2, 2);
-            string postFlip = "0x" + secondHalf + firstHalf; */
-            string postFlip = String.Format("0x")
+            string postFlip = "0x" + secondHalf + firstHalf;
             //probaby a better way to do this lol
 
             return postFlip;
